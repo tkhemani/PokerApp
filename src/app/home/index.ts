@@ -1,7 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Home, Yolo } from './home';
-
+import { CommonModule } from '@angular/common';
 
 export const ROUTER_CONFIG = [
   { path: '', component: Home, pathMatch: 'full' },
@@ -15,6 +15,7 @@ export const ROUTER_CONFIG = [
     Home
   ],
   imports: [
+    CommonModule,
     RouterModule.forChild(ROUTER_CONFIG)
   ],
 })
